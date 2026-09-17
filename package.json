@@ -1,0 +1,23 @@
+{
+  "name": "slh-site",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 3001 --strictPort",
+    "check": "tsc --noEmit",
+    "test": "node --experimental-strip-types --test test/*.test.ts",
+    "build": "npm run check && vite build",
+    "preview": "vite preview --host 127.0.0.1 --port 3001 --strictPort",
+    "images": "node scripts/optimize-images.mjs"
+  },
+  "devDependencies": {
+    "sharp": "0.35.4",
+    "typescript": "7.0.2",
+    "vite": "8.3.0"
+  },
+  "dependencies": {
+    "lenis": "^1.3.26",
+    "pixelarticons": "2.4.1"
+  }
+}
