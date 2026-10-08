@@ -1685,7 +1685,13 @@ h1 span,
 }
 .comparison-credit a:hover { color: var(--fire); }
 @media (max-width: 850px) {
-  .comparison-scroll { --comparison-feature-width: clamp(150px, 48vw, 240px); }
+  .hero-scroll-hint {
+    position: fixed;
+    bottom: calc(64px + env(safe-area-inset-bottom, 0px));
+    min-width: 44px;
+    min-height: 44px;
+  }
+  .comparison-scroll { --comparison-feature-width: clamp(128px, 34vw, 176px); }
   .launcher-table {
     width: calc(var(--comparison-feature-width) + 600px);
     min-width: 0;
@@ -1704,7 +1710,10 @@ h1 span,
   .launcher-table .feature-heading { z-index: 3; }
   .launcher-table tbody td { padding-inline: 10px; }
   .comparison-feature { gap: 9px; }
-  .comparison-feature > span { min-width: 0; overflow-wrap: anywhere; }
+  .comparison-feature > .icon { display: none; }
+  .comparison-feature > span { min-width: 0; }
+  .comparison-word { display: block; }
+  .comparison-separator { display: none; }
   .comparison-status { gap: 6px; font-size: 11px; }
   .comparison-launcher { font-size: 13px; }
   .comparison-scroll-hint {

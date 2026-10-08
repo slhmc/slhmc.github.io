@@ -31,7 +31,7 @@ export function comparisonTable(language: Language): string {
         <caption class="visually-hidden">${t.caption}</caption>
         <colgroup><col class="feature-column"/><col class="slh-column"/><col/><col/><col/></colgroup>
         <thead><tr><th scope="col" class="feature-heading">${t.feature}</th>${launchers.map((launcher, i) => `<th scope="col" ${i === 0 ? 'class="slh-column"' : ''}><div class="comparison-launcher"><img src="${launcher.logo}" alt="" width="48" height="48" loading="lazy"/><span>${launcher.name}</span></div></th>`).join('')}</tr></thead>
-        <tbody>${rows.map((row, i) => `<tr><th scope="row"><span class="comparison-feature">${icon(row.icon)}<span>${t.rows[i]}</span></span></th>${row.values.map((value, col) => `<td ${col === 0 ? 'class="slh-column"' : ''}>${status(value)}</td>`).join('')}</tr>`).join('')}</tbody>
+        <tbody>${rows.map((row, i) => `<tr><th scope="row"><span class="comparison-feature">${icon(row.icon)}<span>${t.rows[i].split(' ').map(word => `<span class="${word === '/' || word === '+' ? 'comparison-separator' : 'comparison-word'}">${word}</span>`).join(' ')}</span></span></th>${row.values.map((value, col) => `<td ${col === 0 ? 'class="slh-column"' : ''}>${status(value)}</td>`).join('')}</tr>`).join('')}</tbody>
       </table>
     </div>
     <p class="comparison-scroll-hint">${icon('arrow')}${t.swipe}</p>
