@@ -1661,6 +1661,8 @@ h1 span,
 .comparison-status .icon { width: 23px; height: 23px; }
 .status-yes { color: #77cf9b; }
 .status-unknown { color: #bdb2aa; font-size: 18px; }
+.comparison-status.status-telemetry-question { color: #e87881; font-size: 20px; cursor: help; }
+.status-telemetry-question:focus-visible { outline: 2px solid var(--fire); outline-offset: 4px; border-radius: 2px; }
 .status-no, .status-java > .icon { color: #e87881; }
 .status-java { color: #bdb2aa; }
 .status-partial, .status-limited { color: #c8b084; }

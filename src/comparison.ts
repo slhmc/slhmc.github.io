@@ -1,7 +1,7 @@
 import { copy, type Language } from './i18n.ts';
 import { icon } from './icons.ts';
 
-type Status = 'yes' | 'no' | 'partial' | 'limited' | 'java' | 'wip' | 'unknown';
+type Status = 'yes' | 'no' | 'partial' | 'limited' | 'java' | 'wip' | 'unknown' | 'millidaTelemetry';
 const rows: { icon: string; values: [Status, Status, Status, Status] }[] = [
   { icon: 'minecraft', values: ['yes', 'java', 'java', 'yes'] },
   { icon: 'unlock', values: ['yes', 'no', 'yes', 'no'] },
@@ -9,7 +9,7 @@ const rows: { icon: string; values: [Status, Status, Status, Status] }[] = [
   { icon: 'appearance', values: ['wip', 'limited', 'limited', 'no'] },
   { icon: 'briefcase', values: ['yes', 'yes', 'no', 'no'] },
   { icon: 'github', values: ['yes', 'yes', 'yes', 'no'] },
-  { icon: 'shield', values: ['no', 'no', 'yes', 'yes'] },
+  { icon: 'shield', values: ['no', 'no', 'millidaTelemetry', 'yes'] },
 ];
 
 export function comparisonTable(language: Language): string {
@@ -21,6 +21,7 @@ export function comparisonTable(language: Language): string {
     { name: 'Minecraft Launcher', logo: '/assets/launchers/minecraft.png' },
   ];
   function status(value: Status) {
+    if (value === 'millidaTelemetry') return `<span class="comparison-status status-telemetry-question" tabindex="0" role="img" aria-label="${t.millidaTelemetry}" title="${t.millidaTelemetry}">?</span>`;
     if (value === 'unknown') return `<span class="comparison-status status-unknown" role="img" aria-label="${t.unknown}" title="${t.unknown}">?</span>`;
     const label = value === 'yes' ? t.yes : value === 'no' ? t.no : value === 'java' ? t.onlyJava : value === 'wip' ? t.wip : t[value];
     const glyph = value === 'yes' ? 'check' : value === 'no' || value === 'java' ? 'close' : value === 'wip' ? 'general' : 'alert';
