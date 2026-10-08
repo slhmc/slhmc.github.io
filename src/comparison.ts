@@ -9,7 +9,7 @@ const rows: { icon: string; values: [Status, Status, Status, Status] }[] = [
   { icon: 'appearance', values: ['wip', 'limited', 'limited', 'no'] },
   { icon: 'briefcase', values: ['yes', 'yes', 'no', 'no'] },
   { icon: 'github', values: ['yes', 'yes', 'yes', 'no'] },
-  { icon: 'shield', values: ['no', 'unknown', 'yes', 'unknown'] },
+  { icon: 'shield', values: ['no', 'no', 'yes', 'yes'] },
 ];
 
 export function comparisonTable(language: Language): string {
