@@ -4,6 +4,7 @@ import { lenis, reducedMotion } from "./scroll.ts";
 import { copy, type Language } from "./i18n.ts";
 import { icon } from "./icons.ts";
 import { LauncherDemo } from "./demo.ts";
+import { comparisonTable } from "./comparison.ts";
 
 
 function detectLanguage(): Language {
@@ -98,16 +99,8 @@ function render() {
         <div id="demo-mount"></div>
       </section>
       <section id="benefits" class="section benefits-section content-width">
-        <div class="section-heading reveal"><p class="eyebrow">${t.benefitsEyebrow}</p><h2>${t.benefitsTitle}<br/><span>${t.benefitsAccent}</span></h2><p>${t.benefitsText}</p></div>
-        <div class="comparison-grid reveal">
-          <article class="memory-card"><div class="card-top"><span class="eyebrow">RAM / ${language === "RU" ? "ОЗУ" : "MEMORY"}</span>${icon("appearance")}</div><h3>${t.memory}</h3><p class="muted small">${t.homeTab}</p>
-            <div class="memory-row slh-memory"><div class="memory-label"><span><img src="/assets/Smile_LauncHer_logo.png" width="25" height="25" alt=""/>Smile LauncHer</span><strong>≈10 <small>${t.mb}</small></strong></div><div class="bar-track"><div class="bar slh-bar"></div></div></div>
-            <div class="memory-row prism-memory"><div class="memory-label"><span>Prism Launcher</span><strong>≈70 <small>${t.mb}</small></strong></div><div class="bar-track"><div class="bar prism-bar"></div></div></div>
-            <div class="memory-footnote">${icon("bolt")} ${t.memoryNote}</div>
-          </article>
-          <div class="benefit-cards">${t.benefitTitles.map((title, i) => `<article class="benefit-card"><div class="benefit-glyph">${i === 0 ? '<span class="speed-number">≈30<span>%</span></span>' : icon(["", "bolt", "home", "general"][i])}${i === 3 ? `<span class="progress-tag">${t.progress}</span>` : ""}</div><h3>${title}</h3><p>${t.benefitTexts[i]}</p></article>`).join("")}</div>
-        </div>
-        <p class="data-note">${t.dataNote}</p>
+        <div class="section-heading reveal"><p class="eyebrow">${t.benefitsEyebrow}</p><h2 id="comparison-title">${t.benefitsTitle}<br/><span>${t.benefitsAccent}</span></h2><p>${t.benefitsText}</p></div>
+        ${comparisonTable(language)}
       </section>
       <section id="download" class="section download-section content-width">
         <div class="download-panel reveal"><span class="corner corner-tl"></span><span class="corner corner-tr"></span><span class="corner corner-bl"></span><span class="corner corner-br"></span>

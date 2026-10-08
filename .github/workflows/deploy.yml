@@ -1,4 +1,4 @@
-name: Bootstrap and deploy website
+name: Deploy website to GitHub Pages
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
   pages: write
   id-token: write
 
@@ -25,23 +25,10 @@ jobs:
       - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7
         with:
           node-version: '24'
-      - run: npm install
-      - run: npm run images
+          cache: npm
+      - run: npm ci
       - run: npm test
       - run: npm run build
-      - name: Persist generated files
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add package-lock.json src/image-manifest.ts \
-            public/assets/preview-optimized/EN/S-Privacy.webp \
-            public/assets/preview-optimized/EN/S-Privacy-mobile.webp \
-            public/assets/preview-optimized/EN/S-Storage.webp \
-            public/assets/preview-optimized/EN/S-Storage-mobile.webp \
-            public/assets/preview-optimized/EN/S-Sync.webp \
-            public/assets/preview-optimized/EN/S-Sync-mobile.webp
-          git diff --cached --quiet || git commit -m "Add generated website assets"
-          git push origin HEAD:main
       - uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6
       - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5
         with:
