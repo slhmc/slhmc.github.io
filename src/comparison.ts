@@ -9,7 +9,7 @@ const rows: { icon: string; values: [Status, Status, Status, Status] }[] = [
   { icon: 'appearance', values: ['wip', 'limited', 'limited', 'no'] },
   { icon: 'briefcase', values: ['yes', 'yes', 'no', 'no'] },
   { icon: 'github', values: ['yes', 'yes', 'millidaSource', 'no'] },
-  { icon: 'shield', values: ['no', 'no', 'no', 'yes'] },
+  { icon: 'shield', values: ['no', 'no', 'yes', 'yes'] },
 ];
 
 export function comparisonTable(language: Language): string {
@@ -39,7 +39,6 @@ export function comparisonTable(language: Language): string {
     </div>
     <p class="comparison-scroll-hint">${icon('arrow')}${t.swipe}</p>
   </div>
-  <p class="data-note comparison-note">${t.note}</p>
   <p class="comparison-note telemetry-note">${t.telemetryNote}</p>
   <p class="comparison-credit"><a href="https://github.com/PrismLauncher/prismlauncher.org/blob/main/public/img/logo.svg">${t.logoCredit}</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></p>`;
 }

@@ -69,7 +69,7 @@ function render() {
       <div class="header-inner">
         <a class="brand" href="#about" aria-label="Smile LauncHer"><img src="/assets/Smile_LauncHer_logo.png" width="44" height="44" alt=""/><span>Smile LauncHer</span></a>
         <nav class="site-nav" aria-label="${language === "RU" ? "Навигация по странице" : "Page navigation"}">${sectionIds.map((id, i) => `<a href="#${id}" ${i === 0 ? 'class="active" aria-current="location"' : ""}>${t.nav[i]}</a>`).join("")}</nav>
-        <div class="header-actions"><a class="community-link" href="https://discord.gg/yhTvuB6U8n" aria-label="Discord" title="Discord">${icon("discord")}</a><a class="github-link" href="https://github.com/slhmc/slh" aria-label="GitHub" title="GitHub">${icon("github")}</a><span class="header-divider"></span><button class="language-switch" aria-label="${t.language}" id="language-switch">${language}<span aria-hidden="true">⌄</span></button></div>
+        <div class="header-actions"><a class="community-link" href="https://t.me/smile_launcher" aria-label="Telegram" title="Telegram">${icon("telegram")}</a><a class="community-link" href="https://discord.gg/yhTvuB6U8n" aria-label="Discord" title="Discord">${icon("discord")}</a><a class="github-link" href="https://github.com/slhmc/slh" aria-label="GitHub" title="GitHub">${icon("github")}</a><span class="header-divider"></span><button class="language-switch" aria-label="${t.language}" id="language-switch">${language}<span aria-hidden="true">⌄</span></button></div>
       </div>
     </header>
     <main>
@@ -108,11 +108,11 @@ function render() {
           <p class="eyebrow">${t.downloadEyebrow}</p><h2>${t.downloadTitle}<br/><span>${t.downloadAccent}</span></h2><p class="download-description">${t.downloadText}</p>
           <a class="button primary download-cta" href="https://github.com/slhmc/slh/releases">${icon("down")}${t.release}${icon("arrow")}</a>
           <p class="release-note">${icon("minecraft")}${t.releaseNote}</p>
-          <div class="download-community"><a class="source-link" href="https://github.com/slhmc/slh">${icon("github")}${t.source}</a><a class="source-link" href="https://discord.gg/yhTvuB6U8n">${icon("discord")}Discord</a></div>
+          <div class="download-community"><a class="source-link" href="https://github.com/slhmc/slh">${icon("github")}${t.source}</a><a class="source-link" href="https://discord.gg/yhTvuB6U8n">${icon("discord")}Discord</a><a class="source-link" href="https://t.me/smile_launcher">${icon("telegram")}Telegram</a></div>
         </div>
       </section>
     </main>
-    <footer class="site-footer content-width"><div class="footer-identity"><a class="footer-brand" href="#about"><img src="/assets/Smile_LauncHer_logo.png" width="36" height="36" alt=""/>Smile LauncHer</a><span>${t.footer}</span></div><p>${t.independent}</p><nav class="footer-links" aria-label="${language === 'RU' ? 'Сообщество и исходный код' : 'Community and source code'}"><a href="https://discord.gg/yhTvuB6U8n">${icon('discord')}Discord</a><a href="https://github.com/slhmc/slh">${icon('github')}GitHub</a></nav></footer>`;
+    <footer class="site-footer content-width"><div class="footer-identity"><a class="footer-brand" href="#about"><img src="/assets/Smile_LauncHer_logo.png" width="36" height="36" alt=""/>Smile LauncHer</a><span>${t.footer}</span></div><p>${t.independent}</p><nav class="footer-links" aria-label="${language === 'RU' ? 'Сообщество и исходный код' : 'Community and source code'}"><a href="https://t.me/smile_launcher">${icon('telegram')}Telegram</a><a href="https://discord.gg/yhTvuB6U8n">${icon('discord')}Discord</a><a href="https://github.com/slhmc/slh">${icon('github')}GitHub</a></nav></footer>`;
   document.querySelector("#demo-mount")!.replaceWith(demo.element);
   document.querySelector("#language-switch")!.addEventListener("click", () => {
     void changeLanguage(language === "RU" ? "EN" : "RU");

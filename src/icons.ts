@@ -24,6 +24,7 @@ import check from 'pixelarticons/svg/check.svg?raw';
 import bolt from 'pixelarticons/svg/zap.svg?raw';
 import github from 'pixelarticons/svg/github.svg?raw';
 import discord from 'pixelarticons/svg/discord.svg?raw';
+import telegram from 'pixelarticons/svg/telegram.svg?raw';
 import windows from 'pixelarticons/svg/app-windows.svg?raw';
 import fullscreen from 'pixelarticons/svg/scale.svg?raw';
 import previous from 'pixelarticons/svg/chevron-left.svg?raw';
@@ -35,7 +36,7 @@ import briefcase from 'pixelarticons/svg/briefcase.svg?raw';
 import unlock from 'pixelarticons/svg/unlock.svg?raw';
 import users from 'pixelarticons/svg/users.svg?raw';
 
-const icons: Record<string, string> = { arrow, arrowDown, chevronDown, "arrow-down": arrowDown, "chevron-down": chevronDown, down, home, cube, search, settings, general, appearance, minecraft, java, accounts, storage, bell, sync, console: consoleIcon, shield, lock, plus, close, check, bolt, github, discord, windows, fullscreen, previous, next, pause, play, alert, briefcase, unlock, users };
+const icons: Record<string, string> = { arrow, arrowDown, chevronDown, "arrow-down": arrowDown, "chevron-down": chevronDown, down, home, cube, search, settings, general, appearance, minecraft, java, accounts, storage, bell, sync, console: consoleIcon, shield, lock, plus, close, check, bolt, github, discord, telegram, windows, fullscreen, previous, next, pause, play, alert, briefcase, unlock, users };
 export function icon(name: string, className = ''): string {
   return (icons[name] ?? cube).replace('<svg ', `<svg class="icon ${className}" aria-hidden="true" focusable="false" `);
 }

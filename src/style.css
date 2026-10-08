@@ -1529,7 +1529,7 @@ h1 span,
   .header-actions { gap: 5px; }
   .header-divider { display: none; }
   .header-actions .icon { width: 20px; height: 20px; }
-  .github-link, .community-link { min-width: 28px; }
+  .github-link, .community-link { min-width: 24px; }
   .language-switch { font-size: 12px; padding: 6px 8px; gap: 6px; }
   .site-nav { font-size: 11px; gap: 0; justify-content: space-between; height: 48px; }
   .hero-eyebrow { font-size: 9px; }
@@ -1550,7 +1550,7 @@ h1 span,
   .footer-brand { font-size: 15px; }
   .site-footer > .footer-identity > span { font-size: 12px; }
   .site-footer > p { grid-row: 3; font-size: 11px; }
-  .footer-links { grid-row: 2; font-size: 13px; }
+  .footer-links { grid-row: 2; font-size: 13px; flex-wrap: wrap; justify-content: center; }
 }
 @media (prefers-reduced-motion: reduce) { .fullscreen-close { animation: none; } }
 
