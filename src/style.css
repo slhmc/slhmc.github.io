@@ -1685,9 +1685,27 @@ h1 span,
 }
 .comparison-credit a:hover { color: var(--fire); }
 @media (max-width: 850px) {
-  .launcher-table { min-width: 940px; font-size: 12px; }
-  .launcher-table tbody th, .launcher-table .feature-heading { padding-left: 18px; }
+  .comparison-scroll { --comparison-feature-width: clamp(150px, 48vw, 240px); }
+  .launcher-table {
+    width: calc(var(--comparison-feature-width) + 600px);
+    min-width: 0;
+    font-size: 12px;
+  }
+  .launcher-table .feature-column { width: var(--comparison-feature-width); }
+  .launcher-table col:not(.feature-column) { width: 150px; }
+  .launcher-table tbody th, .launcher-table .feature-heading {
+    position: sticky;
+    left: 0;
+    z-index: 2;
+    padding-left: 12px;
+    background: #100e0c;
+    box-shadow: 1px 0 #453023, 5px 0 10px #0003;
+  }
+  .launcher-table .feature-heading { z-index: 3; }
+  .launcher-table tbody td { padding-inline: 10px; }
   .comparison-feature { gap: 9px; }
+  .comparison-feature > span { min-width: 0; overflow-wrap: anywhere; }
+  .comparison-status { gap: 6px; font-size: 11px; }
   .comparison-launcher { font-size: 13px; }
   .comparison-scroll-hint {
     display: flex;
