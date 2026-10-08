@@ -1660,6 +1660,7 @@ h1 span,
 }
 .comparison-status .icon { width: 23px; height: 23px; }
 .status-yes { color: #77cf9b; }
+.status-unknown { color: #bdb2aa; font-size: 18px; }
 .status-no, .status-java > .icon { color: #e87881; }
 .status-java { color: #bdb2aa; }
 .status-partial, .status-limited { color: #c8b084; }
@@ -1676,6 +1677,9 @@ h1 span,
 .comparison-status.status-wip .icon { width: 18px; height: 18px; }
 .comparison-scroll-hint { display: none; }
 .comparison-note { font-size: 11px; color: #a39587; }
+.telemetry-note { text-align: center; margin-top: 8px; line-height: 1.8; }
+.telemetry-note a { text-decoration: underline; text-underline-offset: 3px; }
+.telemetry-note a:hover { color: var(--fire); }
 .comparison-credit {
   text-align: center;
   font-size: 9px;

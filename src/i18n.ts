@@ -54,7 +54,10 @@ export const copy = {
     comparison: {
       caption: "Сравнение возможностей SLH, Prism Launcher, Millida Launcher и Minecraft Launcher",
       feature: "Возможность",
-      rows: ["Java + Bedrock", "Лицензия не обязательна", "Microsoft / Offline / Ely.by", "Полная кастомизация", "Portable", "Open Source"],
+      rows: ["Java + Bedrock", "Лицензия не обязательна", "Microsoft / Offline / Ely.by", "Полная кастомизация", "Portable", "Open Source", "Телеметрия"],
+      unknown: "Нет подтверждённых данных о телеметрии лаунчера",
+      telemetryNote: "Телеметрия самого лаунчера, без учёта игры. ? — не подтверждено. В Millida её можно отключить.",
+      telemetrySource: "Исходный код Millida",
       yes: "Есть",
       no: "Нет",
       onlyJava: "Только Java Edition",
@@ -153,7 +156,10 @@ export const copy = {
     comparison: {
       caption: "Feature comparison of SLH, Prism Launcher, Millida Launcher and Minecraft Launcher",
       feature: "Feature",
-      rows: ["Java + Bedrock", "License optional", "Microsoft / Offline / Ely.by", "Full customization", "Portable", "Open Source"],
+      rows: ["Java + Bedrock", "License optional", "Microsoft / Offline / Ely.by", "Full customization", "Portable", "Open Source", "Telemetry"],
+      unknown: "No verified information about launcher telemetry",
+      telemetryNote: "Launcher telemetry only, excluding the game. ? — unverified. Millida allows disabling it.",
+      telemetrySource: "Millida source code",
       yes: "Available",
       no: "Unavailable",
       onlyJava: "Java Edition only",

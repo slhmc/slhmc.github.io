@@ -1,7 +1,7 @@
 import { copy, type Language } from './i18n.ts';
 import { icon } from './icons.ts';
 
-type Status = 'yes' | 'no' | 'partial' | 'limited' | 'java' | 'wip';
+type Status = 'yes' | 'no' | 'partial' | 'limited' | 'java' | 'wip' | 'unknown';
 const rows: { icon: string; values: [Status, Status, Status, Status] }[] = [
   { icon: 'minecraft', values: ['yes', 'java', 'java', 'yes'] },
   { icon: 'unlock', values: ['yes', 'no', 'yes', 'no'] },
@@ -9,6 +9,7 @@ const rows: { icon: string; values: [Status, Status, Status, Status] }[] = [
   { icon: 'appearance', values: ['wip', 'limited', 'limited', 'no'] },
   { icon: 'briefcase', values: ['yes', 'yes', 'no', 'no'] },
   { icon: 'github', values: ['yes', 'yes', 'yes', 'no'] },
+  { icon: 'shield', values: ['no', 'unknown', 'yes', 'unknown'] },
 ];
 
 export function comparisonTable(language: Language): string {
@@ -20,6 +21,7 @@ export function comparisonTable(language: Language): string {
     { name: 'Minecraft Launcher', logo: '/assets/launchers/minecraft.png' },
   ];
   function status(value: Status) {
+    if (value === 'unknown') return `<span class="comparison-status status-unknown" role="img" aria-label="${t.unknown}" title="${t.unknown}">?</span>`;
     const label = value === 'yes' ? t.yes : value === 'no' ? t.no : value === 'java' ? t.onlyJava : value === 'wip' ? t.wip : t[value];
     const glyph = value === 'yes' ? 'check' : value === 'no' || value === 'java' ? 'close' : value === 'wip' ? 'general' : 'alert';
     const text = value === 'java' ? 'Java' : value === 'wip' ? 'W.I.P.' : value === 'partial' || value === 'limited' ? t[value] : '';
@@ -37,5 +39,6 @@ export function comparisonTable(language: Language): string {
     <p class="comparison-scroll-hint">${icon('arrow')}${t.swipe}</p>
   </div>
   <p class="data-note comparison-note">${t.note}</p>
+  <p class="comparison-note telemetry-note">${t.telemetryNote} <a href="https://github.com/millida/launcher/blob/main/src/lib/telemetry.ts">${t.telemetrySource}</a></p>
   <p class="comparison-credit"><a href="https://github.com/PrismLauncher/prismlauncher.org/blob/main/public/img/logo.svg">${t.logoCredit}</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></p>`;
 }
