@@ -3,7 +3,7 @@ export const copy = {
   RU: {
     skip: "К содержимому",
     nav: ["О лаунчере", "Превью", "Сравнение", "Скачать"],
-    tagline: "MINECRAFT JAVA EDITION · WINDOWS",
+    tagline: "MINECRAFT LAUNCHER",
     title: "Твой Minecraft.",
     titleAccent: "Твои правила.",
     intro:
@@ -16,12 +16,12 @@ export const copy = {
     featureTitles: [
       "Каждая сборка — самостоятельна",
       "Быстрая скорость",
-      "Java без лишних хлопот",
+      "На твоей платформе",
     ],
     featureTexts: [
       "Отдельные моды, миры и настройки. Всё на своих местах.",
       "Отзывчивый интерфейс и ускоренная загрузка версий. Меньше ожидания — больше игры.",
-      "Управляй версиями Java прямо в лаунчере. Данные хранятся локально.",
+      "Windows, Linux и macOS на Intel и Apple Silicon (Beta). Поддерживается и Bedrock Edition.",
     ],
     previewEyebrow: "01 / ПОПРОБУЙ САМ",
     previewTitle: "Знакомься, ",
@@ -91,10 +91,10 @@ export const copy = {
     downloadTitle: "Всё начинается",
     downloadAccent: "с одного запуска.",
     downloadText:
-      "Твой следующий мир уже ждёт. Выбери сборку SLH для Windows на странице релизов.",
+      "Твой следующий мир уже ждёт. Выбери сборку SLH для своей системы на странице релизов.",
     release: "Скачать с GitHub",
     source: "Исходный код",
-    releaseNote: "Windows · Бесплатно · Версия в разработке",
+    releaseNote: "Windows · Linux · macOS Intel / Apple Silicon (Beta) · Бесплатно",
     footer: "От игрока, для игроков.",
     independent:
       "Не является официальным продуктом Minecraft. Не связано с Mojang или Microsoft.",
@@ -105,7 +105,7 @@ export const copy = {
   EN: {
     skip: "Skip to content",
     nav: ["About", "Preview", "Compare", "Download"],
-    tagline: "MINECRAFT JAVA EDITION · WINDOWS",
+    tagline: "MINECRAFT LAUNCHER",
     title: "Your Minecraft.",
     titleAccent: "Your rules.",
     intro:
@@ -118,12 +118,12 @@ export const copy = {
     featureTitles: [
       "Every instance is independent",
       "Built for speed",
-      "Java, without the hassle",
+      "On your platform",
     ],
     featureTexts: [
       "Separate mods, worlds and settings. Everything in its place.",
       "A responsive interface and faster version downloads. Less waiting, more playing.",
-      "Manage Java versions right in the launcher. Your data stays local.",
+      "Windows, Linux and macOS on Intel and Apple Silicon (Beta). Bedrock Edition is supported too.",
     ],
     previewEyebrow: "01 / TAKE A LOOK",
     previewTitle: "Meet ",
@@ -193,10 +193,10 @@ export const copy = {
     downloadTitle: "It all starts",
     downloadAccent: "with one launch.",
     downloadText:
-      "Your next world is waiting. Choose your SLH build for Windows on the releases page.",
+      "Your next world is waiting. Choose the SLH build for your system on the releases page.",
     release: "Download on GitHub",
     source: "Source code",
-    releaseNote: "Windows · Free · Development release",
+    releaseNote: "Windows · Linux · macOS Intel / Apple Silicon (Beta) · Free",
     footer: "From a player, for players.",
     independent:
       "Not an official Minecraft product. Not affiliated with Mojang or Microsoft.",

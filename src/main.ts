@@ -107,7 +107,7 @@ function render() {
           <img class="download-logo" src="/assets/Smile_LauncHer_logo.png" alt="" width="76" height="76" loading="lazy"/>
           <p class="eyebrow">${t.downloadEyebrow}</p><h2>${t.downloadTitle}<br/><span>${t.downloadAccent}</span></h2><p class="download-description">${t.downloadText}</p>
           <a class="button primary download-cta" href="https://github.com/slhmc/slh/releases">${icon("down")}${t.release}${icon("arrow")}</a>
-          <p class="release-note">${icon("windows")}${t.releaseNote}</p>
+          <p class="release-note">${icon("minecraft")}${t.releaseNote}</p>
           <div class="download-community"><a class="source-link" href="https://github.com/slhmc/slh">${icon("github")}${t.source}</a><a class="source-link" href="https://discord.gg/yhTvuB6U8n">${icon("discord")}Discord</a></div>
         </div>
       </section>
