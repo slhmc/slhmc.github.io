@@ -1691,7 +1691,7 @@ h1 span,
     min-width: 44px;
     min-height: 44px;
   }
-  .comparison-scroll { --comparison-feature-width: clamp(128px, 34vw, 176px); }
+  .comparison-scroll { --comparison-feature-width: clamp(156px, 39vw, 192px); }
   .launcher-table {
     width: calc(var(--comparison-feature-width) + 600px);
     min-width: 0;
@@ -1709,9 +1709,15 @@ h1 span,
   }
   .launcher-table .feature-heading { z-index: 3; }
   .launcher-table tbody td { padding-inline: 10px; }
-  .comparison-feature { gap: 9px; }
-  .comparison-feature > .icon { display: none; }
-  .comparison-feature > span { min-width: 0; }
+  .comparison-feature { gap: 8px; justify-content: space-between; }
+  .comparison-feature > .icon {
+    display: block;
+    order: 1;
+    flex: 0 0 16px;
+    width: 16px;
+    height: 16px;
+  }
+  .comparison-feature > span { min-width: 0; flex: 1; }
   .comparison-word { display: block; }
   .comparison-separator { display: none; }
   .comparison-status { gap: 6px; font-size: 11px; }
