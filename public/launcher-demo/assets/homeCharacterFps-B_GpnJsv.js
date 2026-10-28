@@ -1,0 +1,1 @@
+function e(e){return typeof e==`number`&&Number.isInteger(e)&&e>=0&&e<=60?e:30}function t(t,n){if(t===61)return 0;if(n){let e=[30,60].find(e=>Math.abs(t-e)<=2);if(e!==void 0)return e}return e(t)}export{e as n,t};

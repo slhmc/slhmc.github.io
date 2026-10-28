@@ -30,6 +30,23 @@ function detectLanguage(): Language {
 let language: Language = detectLanguage();
 const demo = new LauncherDemo(language);
 const app = document.querySelector<HTMLDivElement>("#app")!;
+window.addEventListener("message", (event) => {
+  const frame = document.querySelector<HTMLIFrameElement>(".interactive-launcher-frame");
+  if (!frame || event.origin !== window.location.origin || event.source !== frame.contentWindow || event.data?.type !== "slh-demo-window-action") return;
+  if (frame.classList.contains("is-expanded")) {
+    frame.classList.remove("is-expanded");
+    document.body.classList.remove("launcher-demo-expanded");
+  } else if (event.data.action === "maximize") {
+    frame.classList.add("is-expanded");
+    document.body.classList.add("launcher-demo-expanded");
+  }
+});
+window.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    document.querySelector(".interactive-launcher-frame")?.classList.remove("is-expanded");
+    document.body.classList.remove("launcher-demo-expanded");
+  }
+});
 const sectionIds = ["about", "preview", "benefits", "download"];
 let revealObserver: IntersectionObserver;
 let navObserver: IntersectionObserver;
@@ -113,7 +130,13 @@ function render() {
       </section>
     </main>
     <footer class="site-footer content-width"><div class="footer-identity"><a class="footer-brand" href="#about"><img src="/assets/Smile_LauncHer_logo.png" width="36" height="36" alt=""/>Smile LauncHer</a><span>${t.footer}</span></div><p>${t.independent}</p><nav class="footer-links" aria-label="${language === 'RU' ? 'Сообщество и исходный код' : 'Community and source code'}"><a href="https://t.me/smile_launcher">${icon('telegram')}Telegram</a><a href="https://discord.gg/96TSZg9ZeA">${icon('discord')}Discord</a><a href="https://github.com/slhmc/slh">${icon('github')}GitHub</a></nav></footer>`;
-  document.querySelector("#demo-mount")!.replaceWith(demo.element);
+  const previewFrame = document.createElement("iframe");
+  previewFrame.className = "interactive-launcher-frame";
+  previewFrame.src = "/launcher-demo/index.html#/home";
+  previewFrame.title = language === "RU" ? "Интерактивное демо Smile LauncHer" : "Interactive Smile LauncHer demo";
+  previewFrame.loading = "lazy";
+  previewFrame.allowFullscreen = true;
+  document.querySelector("#demo-mount")!.replaceWith(previewFrame);
   document.querySelector("#language-switch")!.addEventListener("click", () => {
     void changeLanguage(language === "RU" ? "EN" : "RU");
   });

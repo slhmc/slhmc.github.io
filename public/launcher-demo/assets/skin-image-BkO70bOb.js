@@ -1,0 +1,1 @@
+import{t as e}from"./load-image-DwZxoSSm.js";function t(e){return/^https?:\/\//i.test(e)}function n(n){return t(n)?e(n):new Promise((e,t)=>{let r=document.createElement(`img`);r.onload=()=>{if(r.naturalWidth<=0||r.naturalHeight<=0){t(Error(`Пустое изображение (${n})`));return}e(r)},r.onerror=()=>t(Error(`Не удалось декодировать PNG (${n})`)),r.src=n})}export{n as t};

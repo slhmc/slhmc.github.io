@@ -1555,6 +1555,10 @@ h1 span,
 @media (prefers-reduced-motion: reduce) { .fullscreen-close { animation: none; } }
 
 /* Launcher feature comparison */
+.interactive-launcher-frame { display: block; width: 100%; height: clamp(560px, 62vw, 820px); border: 1px solid #453023; border-radius: 8px; background: #1d2125; }
+.interactive-launcher-frame.is-expanded { position: fixed; inset: 0; z-index: 1000; width: 100%; height: 100dvh; min-height: 0; border: 0; border-radius: 0; }
+body.launcher-demo-expanded { overflow: hidden; }
+@media (max-width: 600px) { .interactive-launcher-frame { height: 70vh; min-height: 520px; } }
 .visually-hidden {
   position: absolute;
   width: 1px;

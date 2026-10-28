@@ -1,0 +1,1 @@
+async function e(e){let t=document.createElement(`img`);return new Promise((n,r)=>{t.onload=()=>n(t),t.onerror=r,t.crossOrigin=`anonymous`,typeof e==`string`?t.src=e:(e.crossOrigin!==void 0&&(t.crossOrigin=e.crossOrigin),e.referrerPolicy!==void 0&&(t.referrerPolicy=e.referrerPolicy),t.src=e.src)})}export{e as t};
