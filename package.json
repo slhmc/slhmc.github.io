@@ -7,7 +7,7 @@
     "dev": "vite --host 127.0.0.1 --port 3001 --strictPort",
     "check": "tsc --noEmit",
     "test": "node --experimental-strip-types --test test/*.test.ts",
-    "build": "npm run check && vite build",
+    "build": "node --experimental-strip-types scripts/update-release.ts && npm run check && vite build",
     "preview": "vite preview --host 127.0.0.1 --port 3001 --strictPort",
     "images": "node scripts/optimize-images.mjs"
   },

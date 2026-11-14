@@ -5,6 +5,7 @@ import { copy, type Language } from "./i18n.ts";
 import { icon } from "./icons.ts";
 import { LauncherDemo } from "./demo.ts";
 import { comparisonTable } from "./comparison.ts";
+import { Downloads } from "./downloads.ts";
 
 
 function detectLanguage(): Language {
@@ -28,6 +29,7 @@ function detectLanguage(): Language {
 }
 
 let language: Language = detectLanguage();
+const downloads = new Downloads(language);
 const demo = new LauncherDemo(language);
 const app = document.querySelector<HTMLDivElement>("#app")!;
 window.addEventListener("message", (event) => {
@@ -123,13 +125,14 @@ function render() {
         <div class="download-panel reveal"><span class="corner corner-tl"></span><span class="corner corner-tr"></span><span class="corner corner-bl"></span><span class="corner corner-br"></span>
           <img class="download-logo" src="/assets/Smile_LauncHer_logo.png" alt="" width="76" height="76" loading="lazy"/>
           <p class="eyebrow">${t.downloadEyebrow}</p><h2>${t.downloadTitle}<br/><span>${t.downloadAccent}</span></h2><p class="download-description">${t.downloadText}</p>
-          <a class="button primary download-cta" href="https://github.com/slhmc/slh/releases">${icon("down")}${t.release}${icon("arrow")}</a>
-          <p class="release-note">${icon("minecraft")}${t.releaseNote}</p>
+          <div id="downloads-mount"></div>
           <div class="download-community"><a class="source-link" href="https://github.com/slhmc/slh">${icon("github")}${t.source}</a><a class="source-link" href="https://discord.gg/96TSZg9ZeA">${icon("discord")}Discord</a><a class="source-link" href="https://t.me/smile_launcher">${icon("telegram")}Telegram</a></div>
         </div>
       </section>
     </main>
     <footer class="site-footer content-width"><div class="footer-identity"><a class="footer-brand" href="#about"><img src="/assets/Smile_LauncHer_logo.png" width="36" height="36" alt=""/>Smile LauncHer</a><span>${t.footer}</span></div><p>${t.independent}</p><nav class="footer-links" aria-label="${language === 'RU' ? 'Сообщество и исходный код' : 'Community and source code'}"><a href="https://t.me/smile_launcher">${icon('telegram')}Telegram</a><a href="https://discord.gg/96TSZg9ZeA">${icon('discord')}Discord</a><a href="https://github.com/slhmc/slh">${icon('github')}GitHub</a></nav></footer>`;
+  downloads.setLanguage(language);
+  document.querySelector("#downloads-mount")!.replaceWith(downloads.element);
   const previewFrame = document.createElement("iframe");
   previewFrame.className = "interactive-launcher-frame";
   previewFrame.src = "/launcher-demo/index.html#/home";

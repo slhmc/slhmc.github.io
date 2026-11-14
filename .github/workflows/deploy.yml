@@ -4,6 +4,9 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  schedule:
+    # Refresh the fallback release snapshot even when site sources have not changed.
+    - cron: '17 6 * * *'
 
 permissions:
   contents: read
