@@ -29,6 +29,10 @@ jobs:
       - run: npm ci
       - run: npm test
       - run: npm run build
+      - name: Add Discord verification file
+        run: |
+          mkdir -p dist/.well-known
+          printf '%s' 'dh=351fdde6d02dbacffa24a3268eed2f680ba4d75c' > dist/.well-known/discord
       - uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6
       - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5
         with:
