@@ -1,3 +1,4 @@
+import { detectMacArchitecture } from "./mac-architecture.ts";
 import "./downloads.css";
 import { copy, type Language } from "./i18n.ts";
 import { icon } from "./icons.ts";
@@ -22,6 +23,7 @@ export class Downloads {
   private loading = true;
   private failed = false;
   private macArch = "Apple Silicon";
+  private macArchSelected = false;
   private events = new AbortController();
 
   constructor(language: Language) {
@@ -33,6 +35,7 @@ export class Downloads {
       if (target.closest("[data-release-retry]")) void this.load();
       const arch = target.closest<HTMLButtonElement>("[data-mac-arch]");
       if (arch) {
+        this.macArchSelected = true;
         this.macArch = arch.dataset.macArch!;
         this.render();
         this.element.querySelector<HTMLButtonElement>(`[data-mac-arch="${this.macArch}"]`)?.focus({ preventScroll: true });
@@ -60,6 +63,12 @@ export class Downloads {
     });
     this.render();
     void this.load();
+    if (this.os === "macos") void detectMacArchitecture().then(arch => {
+      if (arch && !this.macArchSelected && !this.events.signal.aborted) {
+        this.macArch = arch;
+        this.render();
+      }
+    });
   }
 
   destroy() { this.events.abort(); }
