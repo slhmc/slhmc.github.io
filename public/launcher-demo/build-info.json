@@ -1,0 +1,10 @@
+{
+  "version": "0.2.4",
+  "source": "https://github.com/slhmc/slh/tree/v0.2.4",
+  "commit": "864bf892f6dfa5a3a3a3058bce35b8d15e1ab658",
+  "adaptations": [
+    "browser preview version 0.2.4",
+    "embedded window controls postMessage bridge"
+  ],
+  "desktopFunctions": "Simulated by the launcher browser preview fixtures"
+}

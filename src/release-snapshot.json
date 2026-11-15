@@ -1,92 +1,92 @@
 [
   {
-    "tag_name": "v0.2.3",
-    "published_at": "2026-11-03T19:11:24Z",
+    "tag_name": "v0.2.4",
+    "published_at": "2026-11-15T17:58:18Z",
     "prerelease": true,
     "draft": false,
     "assets": [
       {
         "name": "latest.json",
-        "size": 2663,
-        "browser_download_url": "https://github.com/slhmc/slh/releases/download/v0.2.3/latest.json",
+        "size": 2716,
+        "browser_download_url": "https://github.com/slhmc/slh/releases/download/v0.2.4/latest.json",
         "state": "uploaded"
       },
       {
         "name": "SHA256SUMS.txt",
-        "size": 1347,
-        "browser_download_url": "https://github.com/slhmc/slh/releases/download/v0.2.3/SHA256SUMS.txt",
+        "size": 1360,
+        "browser_download_url": "https://github.com/slhmc/slh/releases/download/v0.2.4/SHA256SUMS.txt",
         "state": "uploaded"
       },
       {
-        "name": "SLH-0.2.3-aarch64-apple-darwin-app.zip",
-        "size": 18062256,
-        "browser_download_url": "https://github.com/slhmc/slh/releases/download/v0.2.3/SLH-0.2.3-aarch64-apple-darwin-app.zip",
+        "name": "SLH-0.2.4-aarch64-apple-darwin-app.zip",
+        "size": 18765159,
+        "browser_download_url": "https://github.com/slhmc/slh/releases/download/v0.2.4/SLH-0.2.4-aarch64-apple-darwin-app.zip",
         "state": "uploaded"
       },
       {
-        "name": "SLH-0.2.3-aarch64-apple-darwin.app.tar.gz",
-        "size": 18581985,
-        "browser_download_url": "https://github.com/slhmc/slh/releases/download/v0.2.3/SLH-0.2.3-aarch64-apple-darwin.app.tar.gz",
+        "name": "SLH-0.2.4-aarch64-apple-darwin.app.tar.gz",
+        "size": 19303527,
+        "browser_download_url": "https://github.com/slhmc/slh/releases/download/v0.2.4/SLH-0.2.4-aarch64-apple-darwin.app.tar.gz",
         "state": "uploaded"
       },
       {
-        "name": "SLH-0.2.3-aarch64-apple-darwin.dmg",
-        "size": 18249966,
-        "browser_download_url": "https://github.com/slhmc/slh/releases/download/v0.2.3/SLH-0.2.3-aarch64-apple-darwin.dmg",
+        "name": "SLH-0.2.4-aarch64-apple-darwin.dmg",
+        "size": 18948775,
+        "browser_download_url": "https://github.com/slhmc/slh/releases/download/v0.2.4/SLH-0.2.4-aarch64-apple-darwin.dmg",
         "state": "uploaded"
       },
       {
-        "name": "SLH-0.2.3-x86_64-apple-darwin-app.zip",
-        "size": 19335361,
-        "browser_download_url": "https://github.com/slhmc/slh/releases/download/v0.2.3/SLH-0.2.3-x86_64-apple-darwin-app.zip",
+        "name": "SLH-0.2.4-x86_64-apple-darwin-app.zip",
+        "size": 20074548,
+        "browser_download_url": "https://github.com/slhmc/slh/releases/download/v0.2.4/SLH-0.2.4-x86_64-apple-darwin-app.zip",
         "state": "uploaded"
       },
       {
-        "name": "SLH-0.2.3-x86_64-apple-darwin.app.tar.gz",
-        "size": 19685957,
-        "browser_download_url": "https://github.com/slhmc/slh/releases/download/v0.2.3/SLH-0.2.3-x86_64-apple-darwin.app.tar.gz",
+        "name": "SLH-0.2.4-x86_64-apple-darwin.app.tar.gz",
+        "size": 20429126,
+        "browser_download_url": "https://github.com/slhmc/slh/releases/download/v0.2.4/SLH-0.2.4-x86_64-apple-darwin.app.tar.gz",
         "state": "uploaded"
       },
       {
-        "name": "SLH-0.2.3-x86_64-apple-darwin.dmg",
-        "size": 19487215,
-        "browser_download_url": "https://github.com/slhmc/slh/releases/download/v0.2.3/SLH-0.2.3-x86_64-apple-darwin.dmg",
+        "name": "SLH-0.2.4-x86_64-apple-darwin.dmg",
+        "size": 20227309,
+        "browser_download_url": "https://github.com/slhmc/slh/releases/download/v0.2.4/SLH-0.2.4-x86_64-apple-darwin.dmg",
         "state": "uploaded"
       },
       {
-        "name": "SLH-0.2.3-x86_64-pc-windows-msvc-portable.zip",
-        "size": 25139689,
-        "browser_download_url": "https://github.com/slhmc/slh/releases/download/v0.2.3/SLH-0.2.3-x86_64-pc-windows-msvc-portable.zip",
+        "name": "SLH-0.2.4-x86_64-pc-windows-msvc-portable.zip",
+        "size": 25923745,
+        "browser_download_url": "https://github.com/slhmc/slh/releases/download/v0.2.4/SLH-0.2.4-x86_64-pc-windows-msvc-portable.zip",
         "state": "uploaded"
       },
       {
-        "name": "SLH-0.2.3-x86_64-pc-windows-msvc-setup.exe",
-        "size": 17876294,
-        "browser_download_url": "https://github.com/slhmc/slh/releases/download/v0.2.3/SLH-0.2.3-x86_64-pc-windows-msvc-setup.exe",
+        "name": "SLH-0.2.4-x86_64-pc-windows-msvc-setup.exe",
+        "size": 18448016,
+        "browser_download_url": "https://github.com/slhmc/slh/releases/download/v0.2.4/SLH-0.2.4-x86_64-pc-windows-msvc-setup.exe",
         "state": "uploaded"
       },
       {
-        "name": "SLH-0.2.3-x86_64-pc-windows-msvc.msi",
-        "size": 25444352,
-        "browser_download_url": "https://github.com/slhmc/slh/releases/download/v0.2.3/SLH-0.2.3-x86_64-pc-windows-msvc.msi",
+        "name": "SLH-0.2.4-x86_64-pc-windows-msvc.msi",
+        "size": 26226688,
+        "browser_download_url": "https://github.com/slhmc/slh/releases/download/v0.2.4/SLH-0.2.4-x86_64-pc-windows-msvc.msi",
         "state": "uploaded"
       },
       {
-        "name": "SLH-0.2.3-x86_64-unknown-linux-gnu.AppImage",
-        "size": 97397240,
-        "browser_download_url": "https://github.com/slhmc/slh/releases/download/v0.2.3/SLH-0.2.3-x86_64-unknown-linux-gnu.AppImage",
+        "name": "SLH-0.2.4-x86_64-unknown-linux-gnu.AppImage",
+        "size": 98122232,
+        "browser_download_url": "https://github.com/slhmc/slh/releases/download/v0.2.4/SLH-0.2.4-x86_64-unknown-linux-gnu.AppImage",
         "state": "uploaded"
       },
       {
-        "name": "SLH-0.2.3-x86_64-unknown-linux-gnu.deb",
-        "size": 21155484,
-        "browser_download_url": "https://github.com/slhmc/slh/releases/download/v0.2.3/SLH-0.2.3-x86_64-unknown-linux-gnu.deb",
+        "name": "SLH-0.2.4-x86_64-unknown-linux-gnu.deb",
+        "size": 21958972,
+        "browser_download_url": "https://github.com/slhmc/slh/releases/download/v0.2.4/SLH-0.2.4-x86_64-unknown-linux-gnu.deb",
         "state": "uploaded"
       },
       {
-        "name": "SLH-0.2.3-x86_64-unknown-linux-gnu.rpm",
-        "size": 21158212,
-        "browser_download_url": "https://github.com/slhmc/slh/releases/download/v0.2.3/SLH-0.2.3-x86_64-unknown-linux-gnu.rpm",
+        "name": "SLH-0.2.4-x86_64-unknown-linux-gnu.rpm",
+        "size": 21966488,
+        "browser_download_url": "https://github.com/slhmc/slh/releases/download/v0.2.4/SLH-0.2.4-x86_64-unknown-linux-gnu.rpm",
         "state": "uploaded"
       }
     ]

@@ -1,0 +1,1 @@
+import{t as e}from"./tauri-CTPtG0yP.js";function t(t,n){return e(t.status===`installed`?`launch_instance`:`install_instance`,{instanceId:t.id,offlineUsername:n})}export{t};

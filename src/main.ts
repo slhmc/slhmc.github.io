@@ -88,7 +88,7 @@ function render() {
       <div class="header-inner">
         <a class="brand" href="#about" aria-label="Smile LauncHer"><img src="/assets/Smile_LauncHer_logo.png" width="44" height="44" alt=""/><span>Smile LauncHer</span></a>
         <nav class="site-nav" aria-label="${language === "RU" ? "Навигация по странице" : "Page navigation"}">${sectionIds.map((id, i) => `<a href="#${id}" ${i === 0 ? 'class="active" aria-current="location"' : ""}>${t.nav[i]}</a>`).join("")}</nav>
-        <div class="header-actions"><a class="community-link" href="https://t.me/smile_launcher" aria-label="Telegram" title="Telegram">${icon("telegram")}</a><a class="community-link" href="https://discord.gg/96TSZg9ZeA" aria-label="Discord" title="Discord">${icon("discord")}</a><a class="github-link" href="https://github.com/slhmc/slh" aria-label="GitHub" title="GitHub">${icon("github")}</a><span class="header-divider"></span><button class="language-switch" aria-label="${t.language}" id="language-switch">${language}<span aria-hidden="true">⌄</span></button></div>
+        <div class="header-actions"><a class="community-link" href="https://t.me/smile_launcher" aria-label="Telegram" title="Telegram">${icon("telegram")}</a><a class="community-link" href="https://discord.gg/96TSZg9ZeA" aria-label="Discord" title="Discord">${icon("discord")}</a><a class="github-link" href="https://github.com/slhmc/slh" aria-label="GitHub" title="GitHub">${icon("github")}</a><a class="community-link author-smile" href="https://grld.pages.dev/" target="_blank" rel="noopener noreferrer" aria-label="Gareld" title="Gareld"><img src="/assets/gareld-smile.svg" width="24" height="24" alt=""/></a><span class="header-divider"></span><button class="language-switch" aria-label="${t.language}" id="language-switch">${language}<span aria-hidden="true">⌄</span></button></div>
       </div>
     </header>
     <main>
@@ -123,14 +123,13 @@ function render() {
       </section>
       <section id="download" class="section download-section content-width">
         <div class="download-panel reveal"><span class="corner corner-tl"></span><span class="corner corner-tr"></span><span class="corner corner-bl"></span><span class="corner corner-br"></span>
-          <img class="download-logo" src="/assets/Smile_LauncHer_logo.png" alt="" width="76" height="76" loading="lazy"/>
-          <p class="eyebrow">${t.downloadEyebrow}</p><h2>${t.downloadTitle}<br/><span>${t.downloadAccent}</span></h2><p class="download-description">${t.downloadText}</p>
+          <div class="download-heading"><h2>${t.downloads.title} <strong>${t.downloads.titleAccent}</strong></h2></div>
           <div id="downloads-mount"></div>
           <div class="download-community"><a class="source-link" href="https://github.com/slhmc/slh">${icon("github")}${t.source}</a><a class="source-link" href="https://discord.gg/96TSZg9ZeA">${icon("discord")}Discord</a><a class="source-link" href="https://t.me/smile_launcher">${icon("telegram")}Telegram</a></div>
         </div>
       </section>
     </main>
-    <footer class="site-footer content-width"><div class="footer-identity"><a class="footer-brand" href="#about"><img src="/assets/Smile_LauncHer_logo.png" width="36" height="36" alt=""/>Smile LauncHer</a><span>${t.footer}</span></div><p>${t.independent}</p><nav class="footer-links" aria-label="${language === 'RU' ? 'Сообщество и исходный код' : 'Community and source code'}"><a href="https://t.me/smile_launcher">${icon('telegram')}Telegram</a><a href="https://discord.gg/96TSZg9ZeA">${icon('discord')}Discord</a><a href="https://github.com/slhmc/slh">${icon('github')}GitHub</a></nav></footer>`;
+    <footer class="site-footer content-width"><div class="footer-identity"><a class="footer-brand" href="#about"><img src="/assets/Smile_LauncHer_logo.png" width="36" height="36" alt=""/>Smile LauncHer</a></div><p>${t.independent}</p><div class="footer-connect"><nav class="footer-links" aria-label="${language === 'RU' ? 'Сообщество и исходный код' : 'Community and source code'}"><a href="https://t.me/smile_launcher">${icon('telegram')}Telegram</a><a href="https://discord.gg/96TSZg9ZeA">${icon('discord')}Discord</a><a href="https://github.com/slhmc/slh">${icon('github')}GitHub</a></nav><a class="footer-author" href="https://grld.pages.dev/" target="_blank" rel="noopener noreferrer"><img src="/assets/gareld-head.png" width="48" height="48" alt="" loading="lazy"/><span>${language === "RU" ? "Автор" : "Author"} — <strong>Gareld</strong></span></a></div></footer>`;
   downloads.setLanguage(language);
   document.querySelector("#downloads-mount")!.replaceWith(downloads.element);
   const previewFrame = document.createElement("iframe");
@@ -311,6 +310,7 @@ render();
 if (import.meta.hot) {
   import.meta.hot.dispose(() => {
     demo.destroy();
+    downloads.destroy();
   });
 }
 

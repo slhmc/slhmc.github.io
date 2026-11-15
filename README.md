@@ -17,3 +17,7 @@ Windows, macOS и Linux доступны всегда. Определённая 
 Node.js 24: `npm ci`, `npm test`, `npm run build`. Для разработки: `npm run dev` (http://127.0.0.1:3001).
 
 Обновление `main` запускает `.github/workflows/deploy.yml`: тесты, сборку и публикацию `dist` на https://slhmc.github.io/. Параметр Pages в репозитории: GitHub Actions.
+
+## Интерактивное превью 0.2.4
+
+`public/launcher-demo` собрано из тега `slhmc/slh@v0.2.4` (864bf892f6dfa5a3a3a3058bce35b8d15e1ab658), Vite `--base /launcher-demo/`. В изолированной копии исходников исправлена тестовая версия browser bootstrap с 0.3.0-dev на 0.2.4 и сохранён мост postMessage для оконных кнопок внутри iframe. Нативные операции в браузере используют встроенные демонстрационные данные лаунчера. Метаданные сборки: `public/launcher-demo/build-info.json`.

@@ -1,0 +1,1 @@
+import{d as e}from"./tauri-CTPtG0yP.js";var t=e();function n(e){return(0,t.jsx)(`input`,{...e,type:`color`})}export{n as t};
